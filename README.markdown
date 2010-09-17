@@ -27,3 +27,5 @@ Required modules:
 Optional/helpful:
 
 * [Features](http://drupal.org/project/features)
+
+p.s. Don't forget to enable DraggableViews' "Allow Reordering" permission (as well as Node module's "edit any faq content") for anyone who will be administering/sorting the FAQ. 
