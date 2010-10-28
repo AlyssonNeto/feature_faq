@@ -39,18 +39,18 @@ function features_faq_views_default_views() {
     ),
   ));
   $handler->override_option('filters', array(
-    'status_extra' => array(
+    'status' => array(
       'operator' => '=',
-      'value' => '',
+      'value' => '1',
       'group' => '0',
       'exposed' => FALSE,
       'expose' => array(
         'operator' => FALSE,
         'label' => '',
       ),
-      'id' => 'status_extra',
+      'id' => 'status',
       'table' => 'node',
-      'field' => 'status_extra',
+      'field' => 'status',
       'relationship' => 'none',
     ),
     'type' => array(
@@ -91,6 +91,9 @@ function features_faq_views_default_views() {
     'type' => 'none',
   ));
   $handler->override_option('title', 'Frequently Asked Questions');
+  $handler->override_option('header_format', '1');
+  $handler->override_option('header_empty', 0);
+  $handler->override_option('empty_format', '1');
   $handler->override_option('items_per_page', 100);
   $handler->override_option('use_pager', '1');
   $handler->override_option('row_options', array(
@@ -235,9 +238,6 @@ function features_faq_views_default_views() {
       'relationship' => 'none',
     ),
   ));
-  $handler->override_option('header_format', '1');
-  $handler->override_option('header_empty', 0);
-  $handler->override_option('empty_format', '1');
   $handler->override_option('path', 'faq/view');
   $handler->override_option('menu', array(
     'type' => 'default tab',
