@@ -1,3 +1,19 @@
 <?php
 
 include_once('features_faq.features.inc');
+
+/**
+ * Implementation of hook_init()
+ *  - redirect for FAQ items which show up in searches or other places
+ */
+function features_faq_init() {
+  // if we're on a node page
+  if (arg(0) == 'node' && is_numeric(arg(1)) && !arg(2)) {
+    $node = node_load(arg(1));
+    // and the node is a published faq item
+    if ($node && $node->status && $node->type == 'faq') {
+      // redirect to the fragment in the faq
+      drupal_goto('faq', NULL, 'node-' . $node->nid);
+    }
+  }
+}
