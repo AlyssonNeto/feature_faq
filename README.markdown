@@ -14,6 +14,7 @@ This module:
 * Comments on FAQ items are disabled and revisioning is enabled (uses [Strongarm](http://drupal.org/project/strongarm)) 
 * Creates a View at example.com/faq which lists both a table-of-contents at the top, and the questions and answers below. Users can click on the table-of-contents listings to jump down the page to read the answers.
 * Creates a permissioned tab called "sort" on the FAQ page. Clicking this tab allows site admins to drag-and-drop to sort the order of questions/answers using [DraggableViews](http://drupal.org/project/draggableviews). This tab/page only appears to users with the "edit any faq content" permission.
+* Redirects FAQ node pages to their appropriate anchor tag (a.k.a. fragement) within the FAQ page. For instance if node/123 was a FAQ node, it would redirect to faq#node-123
 
 All Views and settings can be overridden to create your own custom FAQ which works as you need. But Features-based FAQ will get you set up with all of the above features simply by enabling the module.
 
